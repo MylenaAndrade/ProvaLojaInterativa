@@ -1,22 +1,16 @@
 <?php
     include_once("conexao.php");
 
+    $nome = "";
+    
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         $nome = $_POST["nome"];
-        $dtCriacao = $_POST["dtCriacao"];
 
-        $query = "SELECT CURDATE();";
+        $data = date('Y-m-d');
 
-        $sql ="INSERT INTO categorias VALUES(default,'$nome','$query')";
+        $sql ="INSERT INTO categorias VALUES(default,'$nome','$data')";
 
-        if(mysqli_query($mysqli, $sql)){
-            echo "Categoria cadastrada com sucesso";
-        }else{
-            echo "Erro!" . mysqli_connect_error($mysqli);
-        }
-
-        $result = mysqli_query($mysqli,$query);
-
+        mysqli_query($mysqli, $sql);
         
         mysqli_close($mysqli);
     }
@@ -35,46 +29,35 @@
 </head>
 <body>
 <header>
-        <div>
-             <img src="" alt="">          
-            <h1>Gestão de Mudanças</h1>
+    
+        <div class="div-header">
+            <h1 class="titulo-header" >Gestão de Mudanças</h1>
+             <img class="img-header" src="../img/header.png" alt="">          
         </div>
 
-        <div>
-            <h2>Meu deshboard</h2>
-            <h3>Dashboard</h3>
-            <i></i>
-            <h4>Categorias</h4>
-        </div>
-
-        <div>
-            <img src="" alt="">
-            <h5>Eu</h5>
-            <i></i>
-            <i class="bi bi-list"></i>
-        </div>
     </header>
 
     <nav class="sidebar">
-        <div>
-            <a href="">
+        <div class="categorias">
+            <a href="inserirCategoria.php">
                 <span> <i class="bi bi-columns-gap"></i></span>
                 <span>Categorias</span>
             </a>
         </div>
 
-        <div>
-            <a href=""> 
+        <div class="produtos">
+            <a href="inserirProduto.php"> 
                 <span> <i class="bi bi-file-earmark-plus"></i></span>
                 <span>Produto</span>
             </a>
         </div>
     </nav>
+
     <div>
         <h1>Adicionar nova Categoria</h1>
-        <form method="POST">
+        <form action="inserirCategoria.php" method="POST">
             <label for="nome">Nome da tabela</label>
-            <input type="nome">
+            <input type="nome" name="nome">
             <label for="id">ID</label>
             <input type="text" name="id" readonly value=>
             <label for="data">Data</label>
@@ -84,6 +67,6 @@
         </form>
     </div>
 
-    <script src="../js/incluirCategoria.js"></script>
+    
 </body>
 </html>
