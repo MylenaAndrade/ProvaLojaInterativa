@@ -31,18 +31,39 @@ span{
     font-size: 20px;
 }
 
+.conteudo{
+    display: flex;
+    flex-direction: row;
+}
 .sidebar{
-    background-color: rgb(202, 202, 202);
+    background-color: rgb(236, 234, 234);
     width: 10%;
-    height: 500px;
+    height: 645px;
 }
 
+
 .categorias{
-    border: 1px solid rgb(233, 232, 232);
-    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.categoria-titulo{
+    color: rgb(11, 11, 133);
+    margin: 30px;
+    font-size: 20px;
 }
 
 .produtos{
-    border: 1px solid rgb(233, 232, 232);
-    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+td{
+    border-bottom: 1px solid rgb(184, 182, 182);
+}
+
+.acoes{
+   padding: 3px;
 }

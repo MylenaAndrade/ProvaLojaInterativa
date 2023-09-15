@@ -28,18 +28,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 </head>
 <body>
-<header>
+    <header>
     
         <div class="div-header">
             <h1 class="titulo-header" >Gestão de Mudanças</h1>
-             <img class="img-header" src="../img/header.png" alt="">          
+             <img class="img-header" src="/../img/header.png" alt="">          
         </div>
 
     </header>
 
     <nav class="sidebar">
         <div class="categorias">
-            <a href="inserirCategoria.php">
+            <a href="listarCategoria.php">
                 <span> <i class="bi bi-columns-gap"></i></span>
                 <span>Categorias</span>
             </a>

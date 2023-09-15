@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar nova Categoria</title>
+</head>
+<body>
+    <div>
+        <h1>Adicionar nova Categoria</h1>
+        <label for="nome">Nome da tabela</label>
+        <input type="nome">
+        <label for="id">ID</label>
+        <input type="text" name="id" readonly value=>>
+        <label for="data">Data</label>
+        <input type="data">
+        <input class="botao-incluir" type="submit" onclick="incluirCategoria();">
+    </div>
+
+    <script >
+        function enviarRequisicao(url, metodo, dados) {
+            return fetch(url, {
+                method: metodo,
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(dados)
+            })
+            .then(response => response.json())
+            .catch(error => console.error('Erro:', error));
+        }
+
+        window.onload = function() {
+            enviarRequisicao('../php/listarCategorias.php', 'GET', {})
+                .then(response => console.log(response));
+
+        }
+    </script>
+</body>
+</html>
