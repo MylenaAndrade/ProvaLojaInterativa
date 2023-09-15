@@ -66,9 +66,9 @@
             <tr>
                 <th><?php echo "$id" ?></th>
                 <th><?php echo "$nome" ?></th>
-                <th><?php echo "$preco" ?></th>
-                <th><?php echo "R$" . "$qtd" ?></th>
-                <th><?php echo "$preco * $qtd" ?></th>
+                <th><?php echo "R$". "$preco" ?></th>
+                <th><?php echo "$qtd" ?></th>
+                <th><?php echo "R$".$preco * $qtd ?></th>
                 <th >
                     <a class="acoes" href="alterarProduto.php"><img src="../img/alterar.png" alt=""></a>
                     <a class="acoes" href="removerProduto.php?id=<?php echo $id;?>"><img src="../img/remover.png" alt=""></a>
