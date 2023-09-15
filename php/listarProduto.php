@@ -30,7 +30,7 @@
     <div class="conteudo">
     <nav class="sidebar">
         <div class="categorias">
-            <a href="inserirCategoria.php">
+            <a href="listarCategoria.php">
                 <span> <i class="bi bi-columns-gap"></i></span>
                 <span>Categorias</span>
             </a>
