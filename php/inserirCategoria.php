@@ -5,13 +5,17 @@
         $nome = $_GET["nome"];
         $dtCriacao = $_GET["dtCriacao"];
 
-        $sql ="INSERT INTO categorias VALUES(default,'$nome',default)";
+        $query = "SELECT CURDATE();";
+
+        $sql ="INSERT INTO categorias VALUES(default,'$nome','$query')";
 
         if(mysqli_query($mysqli, $sql)){
             echo "Categoria cadastrada com sucesso";
         }else{
             echo "Erro!" . mysqli_connect_error($mysqli);
         }
+
+        $result = mysqli_query($mysqli,$query);
 
         
         mysqli_close($mysqli);
