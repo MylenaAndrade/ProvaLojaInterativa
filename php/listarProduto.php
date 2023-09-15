@@ -1,7 +1,7 @@
 <?php
     include_once("conexao.php");
 
-    $query = "SELECT id,nome,preco,quantidade,idCategoria FROM categorias";
+    $query = "SELECT id,nome,preco,quantidade,idCategoria FROM produtos";
 
     $categorias = mysqli_query($mysqli,$query);
                  
