@@ -9,12 +9,7 @@
 
         $sql ="INSERT INTO produtos VALUES(default,'$nome','$preco','$quantidade','$idCategoria')";
 
-        if(mysqli_query($mysqli, $sql)){
-            echo "Produto cadastrado com sucesso";
-        }else{
-            echo "Erro!" . mysqli_connect_error($mysqli);
-        }
-
+        mysqli_query($mysqli, $sql);
         
         mysqli_close($mysqli);
     }
@@ -47,7 +42,7 @@
                 </div>
 
                 <div class="produtos">
-                    <a href="inserirProduto.php"> 
+                    <a href="listarProduto.php"> 
                         <span> <i class="bi bi-file-earmark-plus"></i></span>
                         <span>Produto</span>
                     </a>
@@ -60,11 +55,11 @@
                     <label for="nome">Nome do Produto</label>
                     <input type="nome" name="nome">
                     <label for="preco">Preço</label>
-                    <input type="preco">
+                    <input type="preco" name="preco">
                     <label for="qtd">Qtd</label>
-                    <input type="qtd">
+                    <input type="qtd" name="quantidade">
                     <label for="total">Categoria</label>
-                    <input type="total">
+                    <input type="total" name="idCategoria">
                     <input class="botao-incluir" type="submit" value="Salvar Dados";>
                 </form>
             </div>

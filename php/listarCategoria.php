@@ -65,8 +65,8 @@
                 <th><?php echo "$nome" ?></th>
                 <th><?php echo "$dtCriacao" ?></th>
                 <th >
-                    <a class="acoes" href="alterarCategoria.php"><img src="../img/alterar.png" alt=""></a>
-                    <a class="acoes" href="removerCategoria.php?id=<?php echo $id;?>"><img src="../img/remover.png" alt=""></a>
+                    <a class="acoes" href="alterarCategoria.php?id=<?php echo "$id";?>"><img src="../img/alterar.png" alt=""></a>
+                    <a class="acoes" href="removerCategoria.php?id=<?php echo "$id";?>"><img src="../img/remover.png" alt=""></a>
                 </th>
             </tr>
     <?php }?>

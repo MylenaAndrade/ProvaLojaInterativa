@@ -60,7 +60,6 @@
                     <input type="text" name="id" readonly value=>
                     <label for="data">Data</label>
                     <input type="data">
-                    <i></i>
                     <input class="botao-incluir" type="submit" value="Salvar Dados";>
                 </form>
             </div>

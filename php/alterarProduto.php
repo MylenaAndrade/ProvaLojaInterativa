@@ -7,12 +7,16 @@
     }else{
         $id=$_POST["id"];
         $nome = $_POST["nome"];
+        $preco = $_POST["preco"];
+        $qtd = $_POST["quantidade"];
+        $idCategoria = $_POST["idCategoria"];
         
-        $query = "UPDATE categorias SET nome = '$nome' WHERE id = '$id'";
+        $query = "UPDATE produtos SET nome = '$nome' , preco = '$preco', quantidade = '$qtd', idCategoria = '$idCategoria' WHERE id = '$id'";
+        
         mysqli_query($mysqli, $query);
 
         mysqli_close($mysqli);
-        header("location: /ProvaLojaInterativa/php/listarCategoria.php");
+        header("location: /ProvaLojaInterativa/php/listarProduto.php");
         exit;
     }
 ?>
@@ -52,14 +56,16 @@
             </nav>
 
             <div>
-                <h1>Alterar Categoria</h1>
-                <form action="alterarCategoria.php" method="POST">
-                    <label for="nome">Nome da tabela</label>
+                <h1>Alterar Produto</h1>
+                <form action="alterarProduto.php" method="POST">
+                     <label for="nome">Nome do Produto</label>
                     <input type="nome" name="nome">
-                    <label for="id">ID</label>
-                    <input type="text" name="id" readonly value=<?php echo "$id";?>>
-                    <label for="data">Data</label>
-                    <input type="data" name="data" readonly>
+                    <label for="preco">Preço</label>
+                    <input type="preco" name="preco">
+                    <label for="qtd">Qtd</label>
+                    <input type="qtd" name="quantidade">
+                    <label for="total">Categoria</label>
+                    <input type="total" name="idCategoria">
                     <input class="botao-incluir" type="submit" value="Salvar Dados";>
                 </form>
             </div>

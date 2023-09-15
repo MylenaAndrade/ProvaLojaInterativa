@@ -70,8 +70,8 @@
                 <th><?php echo "$qtd" ?></th>
                 <th><?php echo "R$".$preco * $qtd ?></th>
                 <th >
-                    <a class="acoes" href="alterarProduto.php"><img src="../img/alterar.png" alt=""></a>
-                    <a class="acoes" href="removerProduto.php?id=<?php echo $id;?>"><img src="../img/remover.png" alt=""></a>
+                    <a class="acoes" href="alterarProduto.php?id=<?php echo "$id";?>"><img src="../img/alterar.png" alt=""></a>
+                    <a class="acoes" href="removerProduto.php?id=<?php echo "$id";?>"><img src="../img/remover.png" alt=""></a>
                 </th>
             </tr>
     <?php }?>
@@ -79,7 +79,7 @@
     </div>
 
     <div>
-        <button><a href="inserirCategoria.php">Inserir Nova Categoria</a></button>
+        <button><a href="inserirProduto.php">Inserir Novo Produto</a></button>
     </div>
     </div>
 </body>
