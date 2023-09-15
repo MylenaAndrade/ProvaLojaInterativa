@@ -1,5 +1,5 @@
 <?php
-    include("conexao.php");
+    include_once("conexao.php");
 
     if($_SERVER["REQUEST_METHOD"] == "GET"){
         $nome = $_GET["nome"];
