@@ -1,20 +1,19 @@
-<?php
+<?php 
     include_once("conexao.php");
 
-    $nome = "";
-    
     if($_SERVER["REQUEST_METHOD"] == "POST"){
+        $id=$_POST["id"];
         $nome = $_POST["nome"];
-
-        $data = date('Y-m-d');
-
-        $sql ="INSERT INTO categorias VALUES(default,'$nome','$data')";
-
-        mysqli_query($mysqli, $sql);
         
-        mysqli_close($mysqli);
-    }
+        $query = "UPDATE categorias SET nome = '$nome' WHERE id = '$id'";
+        mysqli_query($mysqli, $query);
 
+        mysqli_close($mysqli);
+        header("location: /ProvaLojaInterativa/php/listarCategoria.php");
+        exit;
+    }else{
+        $id=$_GET["id"];
+    }
 ?>
 
 <!DOCTYPE html>
@@ -52,15 +51,14 @@
             </nav>
 
             <div>
-                <h1>Adicionar nova Categoria</h1>
-                <form action="inserirCategoria.php" method="POST">
+                <h1>Alterar Categoria</h1>
+                <form action="alterarCategoria.php" method="POST">
                     <label for="nome">Nome da tabela</label>
                     <input type="nome" name="nome">
                     <label for="id">ID</label>
-                    <input type="text" name="id" readonly value=>
+                    <input type="text" name="id" readonly value=<?php echo "$id";?>>
                     <label for="data">Data</label>
                     <input type="data">
-                    <i></i>
                     <input class="botao-incluir" type="submit" value="Salvar Dados";>
                 </form>
             </div>

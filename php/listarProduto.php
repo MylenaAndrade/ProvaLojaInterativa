@@ -1,7 +1,7 @@
 <?php
     include_once("conexao.php");
 
-    $query = "SELECT id,nome,dtCriacao FROM categorias";
+    $query = "SELECT id,nome,preco,quantidade,idCategoria FROM categorias";
 
     $categorias = mysqli_query($mysqli,$query);
                  
@@ -46,27 +46,32 @@
 
     <div>
 
-        <h1 class="categoria-titulo">Categorias</h1>
+        <h1 class="categoria-titulo">Produtos</h1>
         <table>
             <tr>
                 <td>ID</td>
-                <td>Nome</td>
-                <td>Data de Criação</td>
+                <td>Nome do Produto</td>
+                <td>Preço</td>
+                <td>Qtd</td>
+                <td>Total</td>
                 <td>Ação</td>
             </tr>
 
             <?php  while($linha = mysqli_fetch_array($categorias)){
                     $id = $linha["id"];
                     $nome = $linha["nome"];
-                    $dtCriacao = $linha["dtCriacao"];
+                    $preco = $linha["preco"];
+                    $qtd = $linha["quantidade"];
                 ?>
             <tr>
                 <th><?php echo "$id" ?></th>
                 <th><?php echo "$nome" ?></th>
-                <th><?php echo "$dtCriacao" ?></th>
+                <th><?php echo "$preco" ?></th>
+                <th><?php echo "R$" . "$qtd" ?></th>
+                <th><?php echo "$preco * $qtd" ?></th>
                 <th >
-                    <a class="acoes" href="alterarCategoria.php"><img src="../img/alterar.png" alt=""></a>
-                    <a class="acoes" href="removerCategoria.php?id=<?php echo $id;?>"><img src="../img/remover.png" alt=""></a>
+                    <a class="acoes" href="alterarProduto.php"><img src="../img/alterar.png" alt=""></a>
+                    <a class="acoes" href="removerProduto.php?id=<?php echo $id;?>"><img src="../img/remover.png" alt=""></a>
                 </th>
             </tr>
     <?php }?>
