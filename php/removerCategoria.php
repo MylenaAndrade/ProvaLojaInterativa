@@ -7,7 +7,11 @@
 
         $query = "DELETE FROM categorias WHERE id = '$id'";
 
-        mysqli_query($mysqli,$query);
+        if(mysqli_query($mysqli, $query)){
+            echo "Categoria removida com sucesso";
+        }else{
+            echo "Erro!" . mysqli_connect_error($mysqli);
+        }
 
         mysqli_close($mysqli);
 
