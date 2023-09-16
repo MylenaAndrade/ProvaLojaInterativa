@@ -44,7 +44,7 @@
         </div>
     </nav>
 
-    <div>
+    <div class="conteudo-central">
 
         <h1 class="categoria-titulo">Produtos</h1>
         <table>
@@ -79,7 +79,7 @@
     </div>
 
     <div>
-        <button><a href="inserirProduto.php">Inserir Novo Produto</a></button>
+        <button class="btn-inserir"><a  href="inserirProduto.php">Inserir Novo Produto</a></button>
     </div>
     </div>
 </body>

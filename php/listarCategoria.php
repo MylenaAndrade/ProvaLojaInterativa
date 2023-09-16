@@ -44,7 +44,7 @@
         </div>
     </nav>
 
-    <div>
+    <div class="conteudo-central">
 
         <h1 class="categoria-titulo">Categorias</h1>
         <table>
@@ -74,7 +74,7 @@
     </div>
 
     <div>
-        <button><a href="inserirCategoria.php">Inserir Nova Categoria</a></button>
+        <button class="btn-inserir"><a href="inserirCategoria.php">Inserir Nova Categoria</a></button>
     </div>
     </div>
 </body>

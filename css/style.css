@@ -37,10 +37,13 @@ span{
 }
 .sidebar{
     background-color: rgb(236, 234, 234);
-    width: 10%;
+    width: 12%;
     height: 645px;
 }
 
+.conteudo-central{
+    width: 80%;
+}
 
 .categorias{
     display: flex;
@@ -60,10 +63,38 @@ span{
     border: 1px solid rgb(255, 255, 255);
 }
 
-td{
-    border-bottom: 1px solid rgb(184, 182, 182);
+table{
+    
+    font-size: 20px;
+    margin: 50px;
+    margin-left: 350px;
+
 }
 
-.acoes{
-   padding: 3px;
+td{
+    border-bottom: 1px solid rgb(184, 182, 182);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
 }
+
+th{
+    border-bottom: 1px solid rgb(184, 182, 182);
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+}
+
+.btn-inserir{
+    border: 1px solid rgb(13, 13, 112);
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 15px;
+}
+
+
+
+.acoes{
+   padding: 5px;
+}
+
